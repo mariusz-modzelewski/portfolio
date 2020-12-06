@@ -1,0 +1,42 @@
+@import 'reset';
+@import 'mixins';
+@import 'variables';
+@import 'typography';
+@import 'header';
+@import 'about-me';
+@import 'skills';
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $main-color;
+    border-radius: 25px;
+}
+
+.container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0 15px;
+}
+.page-container {
+    margin: 0 auto;
+    max-width: 1920px;
+    background-color: $color-white;
+}
+
+.btn {
+    border: 1px solid;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    &--primary {
+
+    }
+}

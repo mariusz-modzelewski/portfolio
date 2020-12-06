@@ -1,0 +1,115 @@
+.header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(/assets/img/hero.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+
+    &__text {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 70vh;
+        width: 100%;
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 48px;
+
+        & > span {
+            color: $main-color;
+        }
+    }
+
+    &__sub-title {
+        font-size: 64px;
+        color: $color-white;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &__brand {
+
+    }
+    &__items {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+    }
+
+    &__item {
+        margin: 40px 20px;
+    }
+
+    &__link {
+        color: $menu-link-color;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 36px;
+	height: 36px;
+	box-sizing: border-box;
+    transform: rotate(135deg);
+    opacity: .5;
+	
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-width: 4px 4px 0 0;
+		border-style: solid;
+        border-color: $color-white;
+		transition: .2s ease;
+		display: block;
+		transform-origin: 100% 0;
+	}
+
+	&:after {
+		content: '';
+		float: left;
+		position: relative;
+		top: -100%;
+		width: 100%;
+		height: 100%;
+		border-width: 0 4px 0 0;
+		border-style: solid;
+		border-color: $color-white;
+		transform-origin: 100% 0;
+		transition:.2s ease;
+	}
+	
+	&:hover::after {
+		transform: rotate(45deg);
+		border-color: $main-color;
+		height: 120%;
+	}
+	&:hover::before {
+		border-color: $main-color;
+		transform: scale(.8);
+		
+	}
+}

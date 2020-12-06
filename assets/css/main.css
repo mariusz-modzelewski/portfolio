@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+
+a {
+  color: #2483d1;
+}
+
+.header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/assets/img/hero.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+.header__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-height: 70vh;
+  width: 100%;
+}
+
+.header__title {
+  color: #fff;
+  font-size: 48px;
+}
+
+.header__title > span {
+  color: #2483d1;
+}
+
+.header__sub-title {
+  font-size: 64px;
+  color: #fff;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.menu__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+}
+
+.menu__item {
+  margin: 40px 20px;
+}
+
+.menu__link {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu__link:hover {
+  color: #2483d1;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  opacity: .5;
+}
+
+.scroll-down::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-width: 4px 4px 0 0;
+  border-style: solid;
+  border-color: #fff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  display: block;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}
+
+.scroll-down:after {
+  content: '';
+  float: left;
+  position: relative;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  border-width: 0 4px 0 0;
+  border-style: solid;
+  border-color: #fff;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.scroll-down:hover::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-color: #2483d1;
+  height: 120%;
+}
+
+.scroll-down:hover::before {
+  border-color: #2483d1;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.about-me {
+  margin: 30px auto;
+}
+
+.about-me__title {
+  margin: 20px auto;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+}
+
+.about-me__image {
+  max-width: 400px;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  border-radius: 25px;
+}
+
+.about-me__text {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  margin: 0 20px;
+}
+
+.about-me__text p {
+  margin: 20px 0;
+}
+
+.skills {
+  background-color: #2483d1;
+  width: 100%;
+}
+
+.skills__skill {
+  -ms-flex-preferred-size: 18%;
+      flex-basis: 18%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2483d1;
+  border-radius: 25px;
+}
+
+.container {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.page-container {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-color: #fff;
+}
+
+.btn {
+  border: 1px solid;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
