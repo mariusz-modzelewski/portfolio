@@ -28,6 +28,7 @@
     margin: 0 auto;
     max-width: 1920px;
     background-color: $color-white;
+    overflow: hidden;
 }
 
 .btn {
@@ -35,8 +36,14 @@
     padding: 10px 20px;
     text-decoration: none;
     text-transform: uppercase;
-    
-    &--primary {
 
+    &--primary {
+        color: $main-color;
+        border-color: $main-color;
+
+        &:hover {
+            background-color: $main-color;
+            color: $color-white;
+        }
     }
 }

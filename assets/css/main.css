@@ -51,7 +51,7 @@ a {
 }
 
 .header__title > span {
-  color: #2483d1;
+  color: #2cb66a;
 }
 
 .header__sub-title {
@@ -95,7 +95,7 @@ a {
 }
 
 .menu__link:hover {
-  color: #2483d1;
+  color: #2cb66a;
 }
 
 .scroll-down {
@@ -144,12 +144,12 @@ a {
 .scroll-down:hover::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  border-color: #2483d1;
+  border-color: #2cb66a;
   height: 120%;
 }
 
 .scroll-down:hover::before {
-  border-color: #2483d1;
+  border-color: #2cb66a;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
@@ -183,13 +183,48 @@ a {
 }
 
 .skills {
-  background-color: #2483d1;
   width: 100%;
+  padding: 30px 0;
+}
+
+.skills .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skills__title {
+  color: #fff;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  margin: 20px auto;
 }
 
 .skills__skill {
-  -ms-flex-preferred-size: 18%;
-      flex-basis: 18%;
+  -ms-flex-preferred-size: 23%;
+      flex-basis: 23%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.skills__skill i {
+  font-size: 120px;
+  color: #333;
+}
+
+.skills__image {
+  max-width: 150px;
+}
+
+.skills__name {
+  color: #2cb66a;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.skills__grade:hover {
+  color: #FFD700;
 }
 
 ::-webkit-scrollbar {
@@ -197,7 +232,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2483d1;
+  background: #2cb66a;
   border-radius: 25px;
 }
 
@@ -222,6 +257,7 @@ a {
   margin: 0 auto;
   max-width: 1920px;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .btn {
@@ -229,4 +265,14 @@ a {
   padding: 10px 20px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.btn--primary {
+  color: #2cb66a;
+  border-color: #2cb66a;
+}
+
+.btn--primary:hover {
+  background-color: #2cb66a;
+  color: #fff;
 }
