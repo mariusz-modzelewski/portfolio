@@ -14,7 +14,8 @@
     }
 
     &__skill {
-        flex-basis: 23%;
+        position: relative;
+        flex-basis: 25%;
         margin-bottom: 30px;
         text-align: center;
 
@@ -35,6 +36,8 @@
     }
 
     &__grade {
+        font-size: 20px;
+        
         &:hover {
             color:#FFD700;
         }

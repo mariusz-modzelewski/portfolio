@@ -202,8 +202,9 @@ a {
 }
 
 .skills__skill {
-  -ms-flex-preferred-size: 23%;
-      flex-basis: 23%;
+  position: relative;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -221,6 +222,10 @@ a {
   color: #2cb66a;
   font-weight: 700;
   margin: 15px 0;
+}
+
+.skills__grade {
+  font-size: 20px;
 }
 
 .skills__grade:hover {
