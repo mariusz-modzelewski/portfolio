@@ -1,9 +1,81 @@
 .portfolio {
+    margin: 30px auto;
+
+    &__title {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
     &__project {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-basis: 49%;
+        max-width: 500px;
+
+        &:hover {
+            overflow: hidden;
+        }
+
+        &:hover .portfolio__desc {
+            opacity: 1;
+            visibility: visible;
+            top: 50%;
+        }
+    }
+    
+    &__desc {
+        display: flex;
+        opacity: 0;
+        flex-direction: column;
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: top 0.8s ease, opacity 0.2s, visibility 0.2s;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__project-title {
+
+    }
+
+    &__project-desc {
+
+    }
+
+    &__technologies-title {
+
+    }
+
+    &__technologies-list {
+
+    }
+
+    &__technologies-item {
 
     }
 
     &__image {
-        
+        border-radius: 20px;
+    }
+
+    &__buttons {
+        display: flex;
+        width: 100%;;
+        justify-content: flex-end;
+        margin: 30px 0;
+        z-index: 5;
+
+        & .btn {
+            margin-left: 10px;
+        }
     }
 }
