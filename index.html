@@ -259,8 +259,37 @@
                     </div>
                 </div>
             </section>
+            <section class="contact">
+                <div class="container">
+                    <h2 class="contact__title">Kontakt</h2>
+                    <p class="contact__text">Masz jakieś pytania? Skontaktuj się ze mną poprzez e-mail!</p>
+                    <a href="#" class="contact__info contact__email"><i class="fas fa-envelope"></i>
+                        adresemail@email.pl</a>
+                    <p class="contact__info contact__localization"><i class="fas fa-map-marker-alt"></i>Białystok</p>
+                    <a href="#" class="contact__info contact__phone"><i class="fas fa-phone"></i>+48 123 456 789</a>
+                    <form class="contact__form" action="#" method="POST">
+                        <label for="name">
+                            Imię
+                            <input class="contact__input" placeholder="Imię" type="text" id="name" name="name" required>
+                        </label>
+                        <label for="email">
+                            Adres Email
+                            <input class="contact__input" placeholder="Email" type="email" id="email" name="email"
+                                required>
+                        </label>
+                        <label for="message">
+                            Wiadomość
+                            <textarea class="contact__input" placeholder="Wiadomość" rows="1" id="message"
+                                name="message" required></textarea>
+                        </label>
+                        <button class="contact__btn btn btn--primary" type="submit"><i
+                                class="fas fa-paper-plane"></i>Wyślij</button>
+                    </form>
+                </div>
+            </section>
     </div>
     </main>
+    <footer class="footer"></footer>
     </div>
     <script src="https://kit.fontawesome.com/f127b247cf.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>

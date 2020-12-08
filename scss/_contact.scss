@@ -1,0 +1,66 @@
+.contact {
+
+    &__title {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    &__text {
+        flex-basis: 100%;
+        text-align: center;
+
+        margin: 20px 0;
+    }
+
+    &__info {
+        font-size: 20px;
+        color: $font-color-default;
+
+        & i {
+            margin-right: 5px;
+        }
+    }
+
+    &__mail {
+
+    }
+
+    &__localization {
+
+    }
+
+    &__phone {
+
+    }
+
+    &__form {
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin: 30px 0;
+        padding: 30px;
+
+        border: 1px solid $main-color;
+    }
+
+    &__input {
+        min-height: 30px;
+        border: none;
+        border-bottom: 1px solid $main-color;
+    }
+
+    &__btn {
+        background: none;
+
+        & i {
+            margin-right: 5px;
+            color: $main-color;
+        }
+
+        &:hover i {
+            color: $color-white;
+        }
+    }
+}
