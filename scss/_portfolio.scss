@@ -13,11 +13,20 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        flex-basis: 49%;
+        flex-basis: 31%;
+
         max-width: 500px;
+        margin: 20px 0;
+        
+        box-shadow: 0 3px 20px 0 rgba(0,0,0,.15);
+        border-radius: 20px;
+
+        transition: transform .2s linear 0s;
 
         &:hover {
             overflow: hidden;
+            transform: scale(1.02);
+            box-shadow: 0 1rem 3rem rgba(31,45,61,.125);
         }
 
         &:hover .portfolio__desc {
@@ -28,54 +37,63 @@
     }
     
     &__desc {
-        display: flex;
-        opacity: 0;
-        flex-direction: column;
-        position: absolute;
-        visibility: hidden;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: top 0.8s ease, opacity 0.2s, visibility 0.2s;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
+        padding: 30px 20px;
     }
     
     &__project-title {
-
+        font-size: 20px;
     }
 
     &__project-desc {
-
+        font-size: 14px;
+        margin: 15px 0;
     }
 
     &__technologies-title {
-
+        font-size: 16px;
     }
 
     &__technologies-list {
-
+        list-style: none;
+        display: flex;
+        justify-content: center;
     }
 
     &__technologies-item {
+        margin: 10px 5px 0px;
+        font-size: 14px;
 
+        &:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f0a9";
+            color: $main-color;
+            font-weight: 600;
+            margin-right: 5px;
+        }
     }
 
     &__image {
         border-radius: 20px;
+        max-width: 100%;
     }
 
     &__buttons {
         display: flex;
-        width: 100%;;
-        justify-content: flex-end;
-        margin: 30px 0;
-        z-index: 5;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
 
         & .btn {
-            margin-left: 10px;
+            margin: auto 5px;
+
+            & i {
+                color: $main-color;
+                margin-right: 5px;
+            }
+
+            &:hover i {
+                color: $color-white;
+            }
         }
     }
 }

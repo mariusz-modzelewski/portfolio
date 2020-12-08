@@ -201,6 +201,12 @@ a {
   margin: 20px auto;
 }
 
+.skills__sub-title {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+}
+
 .skills__skill {
   position: relative;
   -ms-flex-preferred-size: 25%;
@@ -258,13 +264,25 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -ms-flex-preferred-size: 49%;
-      flex-basis: 49%;
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
   max-width: 500px;
+  margin: 20px 0;
+  -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  -webkit-transition: -webkit-transform .2s linear 0s;
+  transition: -webkit-transform .2s linear 0s;
+  transition: transform .2s linear 0s;
+  transition: transform .2s linear 0s, -webkit-transform .2s linear 0s;
 }
 
 .portfolio__project:hover {
   overflow: hidden;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.125);
+          box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.125);
 }
 
 .portfolio__project:hover .portfolio__desc {
@@ -274,50 +292,72 @@ a {
 }
 
 .portfolio__desc {
+  padding: 30px 20px;
+}
+
+.portfolio__project-title {
+  font-size: 20px;
+}
+
+.portfolio__project-desc {
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.portfolio__technologies-title {
+  font-size: 16px;
+}
+
+.portfolio__technologies-list {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  opacity: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  visibility: hidden;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: top 0.8s ease, opacity 0.2s, visibility 0.2s;
-  transition: top 0.8s ease, opacity 0.2s, visibility 0.2s;
-  width: 100%;
-  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.portfolio__technologies-item {
+  margin: 10px 5px 0px;
+  font-size: 14px;
+}
+
+.portfolio__technologies-item:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0a9";
+  color: #2cb66a;
+  font-weight: 600;
+  margin-right: 5px;
 }
 
 .portfolio__image {
   border-radius: 20px;
+  max-width: 100%;
 }
 
 .portfolio__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin: 30px 0;
-  z-index: 5;
+  margin-bottom: 20px;
 }
 
 .portfolio__buttons .btn {
-  margin-left: 10px;
+  margin: auto 5px;
+}
+
+.portfolio__buttons .btn i {
+  color: #2cb66a;
+  margin-right: 5px;
+}
+
+.portfolio__buttons .btn:hover i {
+  color: #fff;
 }
 
 ::-webkit-scrollbar {
