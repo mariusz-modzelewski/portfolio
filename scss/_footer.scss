@@ -1,0 +1,28 @@
+.footer {
+    position: relative;
+    padding: 20px 0;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+
+    &__copyright {
+        color: $color-white;
+    }
+
+    &__links {
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        transform: translateY(-50%);
+
+        & i {
+            font-size: 20px;
+            color: $color-white;
+            margin-left: 10px;
+        }
+    }
+
+    &__link {
+        
+    }
+}

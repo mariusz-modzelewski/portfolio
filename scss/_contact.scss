@@ -33,9 +33,13 @@
 
     }
 
+    &__data {
+        flex-basis: 30%;
+    }
+
     &__form {
         display: flex;
-        flex-basis: 100%;
+        flex-basis: 70%;
         flex-direction: column;
         align-items: flex-start;
 
@@ -45,14 +49,36 @@
         border: 1px solid $main-color;
     }
 
+    &__form-title {
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    &__label {
+        margin: 10px 0;
+    }
+
     &__input {
         min-height: 30px;
         border: none;
         border-bottom: 1px solid $main-color;
+        width: 100%;
+        padding: 0 5px;
+
+        &:focus {
+            outline-color: $main-color;
+        }
+    }
+
+    &__area {
+        max-width: 100%;
+        min-height: 100px;
     }
 
     &__btn {
         background: none;
+        font-size: 16px;
+        margin: 10px 0;
 
         & i {
             margin-right: 5px;
