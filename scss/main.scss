@@ -19,7 +19,7 @@
 }
 
 .container {
-    max-width: 1200px;
+    max-width: $screen-max-width;;
     display: flex;
     align-items: center;
     justify-content: space-between;

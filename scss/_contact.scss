@@ -13,7 +13,7 @@
     }
 
     &__info {
-        font-size: 20px;
+        font-size: 1.25rem;
         color: $font-color-default;
 
         & i {
@@ -76,8 +76,7 @@
     }
 
     &__btn {
-        background: none;
-        font-size: 16px;
+        font-size: 1rem;
         margin: 10px 0;
 
         & i {

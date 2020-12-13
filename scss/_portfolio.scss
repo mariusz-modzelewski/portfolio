@@ -45,12 +45,12 @@
     }
 
     &__project-desc {
-        font-size: 14px;
+        font-size: 0.875rem;
         margin: 15px 0;
     }
 
     &__technologies-title {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     &__technologies-list {
@@ -61,7 +61,7 @@
 
     &__technologies-item {
         margin: 10px 5px 0px;
-        font-size: 14px;
+        font-size: 0.875rem;
 
         &:before {
             font-family: "Font Awesome 5 Free";

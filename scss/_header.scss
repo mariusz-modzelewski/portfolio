@@ -21,7 +21,7 @@
 
     &__title {
         color: $color-white;
-        font-size: 48px;
+        font-size: 3rem;
 
         & > span {
             color: $main-color;
@@ -29,7 +29,7 @@
     }
 
     &__sub-title {
-        font-size: 64px;
+        font-size: 4rem;
         color: $color-white;
     }
 }
@@ -55,7 +55,7 @@
 
     &__link {
         color: $menu-link-color;
-        font-size: 16px;
+        font-size: 1rem;
         text-transform: uppercase;
         font-weight: 600;
         text-decoration: none;
@@ -106,7 +106,8 @@
 		transform: rotate(45deg);
 		border-color: $main-color;
 		height: 120%;
-	}
+    }
+    
 	&:hover::before {
 		border-color: $main-color;
 		transform: scale(.8);
