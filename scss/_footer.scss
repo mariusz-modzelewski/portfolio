@@ -2,12 +2,24 @@
     padding: 20px 0;
     background-color: $main-color;
 
+    & .container {
+        justify-content: center;
+
+        @include mq(tablet-large) {
+            justify-content: space-between;
+        }
+    }
+
     &__copyright {
         color: $color-white;
     }
 
     &__links {
+        margin-bottom: 15px;
 
+        @include mq(tablet-large) {
+            margin-bottom: 0;
+        }
     }
 
     &__link {

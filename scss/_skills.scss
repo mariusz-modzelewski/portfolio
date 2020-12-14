@@ -29,9 +29,13 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        min-height: 250px;
-        flex-basis: 25%;
+        flex-basis: 100%;
         margin-bottom: 30px;
+
+        @include mq(tablet-large) {
+            flex-basis: 25%;
+            min-height: 250px;
+        }
 
         & i {
             font-size: 120px;

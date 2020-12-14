@@ -2,8 +2,10 @@
     margin: 30px auto;
 
     & .container {
+        justify-content: center;
+
         @include mq(tablet-large) {
-            justify-content: center;
+            justify-content: space-between;
         }
     }
 
@@ -14,22 +16,24 @@
     }
 
     &__image {
-        max-width: 400px;
-        flex-basis: 40%;
+        max-width: 250px;
+        flex-basis: 100%;
         border-radius: 50%;
 
         @include mq(tablet-large) {
-            flex-basis: 100%;
+            flex-basis: 40%;
+            // max-width: 400px;
         }
     }
 
     &__text {
-        flex-basis: 60%;
+        flex-basis: 100%;
         margin: 0 20px;
+        text-align: center;
 
         @include mq(tablet-large) {
-            flex-basis: 100%;
-            text-align: center;
+            flex-basis: 60%;
+            text-align: left;
         }
 
         & p {

@@ -68,7 +68,13 @@ h2 {
 
 .header__title {
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .header__title {
+    font-size: 3rem;
+  }
 }
 
 .header__title > span {
@@ -76,8 +82,14 @@ h2 {
 }
 
 .header__sub-title {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .header__sub-title {
+    font-size: 4rem;
+  }
 }
 
 .menu {
@@ -279,11 +291,17 @@ h2 {
   margin: 30px auto;
 }
 
+.about-me .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media (min-width: 1024px) {
   .about-me .container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -295,30 +313,31 @@ h2 {
 }
 
 .about-me__image {
-  max-width: 400px;
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  max-width: 250px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   border-radius: 50%;
 }
 
 @media (min-width: 1024px) {
   .about-me__image {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
   }
 }
 
 .about-me__text {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   margin: 0 20px;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
   .about-me__text {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    text-align: center;
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    text-align: left;
   }
 }
 
@@ -372,10 +391,17 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 250px;
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   margin-bottom: 30px;
+}
+
+@media (min-width: 1024px) {
+  .skills__skill {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    min-height: 250px;
+  }
 }
 
 .skills__skill i {
@@ -427,9 +453,8 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -ms-flex-preferred-size: 31%;
-      flex-basis: 31%;
-  max-width: 500px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   margin: 20px 0;
   -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.15);
@@ -438,6 +463,14 @@ h2 {
   transition: -webkit-transform .2s linear 0s;
   transition: transform .2s linear 0s;
   transition: transform .2s linear 0s, -webkit-transform .2s linear 0s;
+}
+
+@media (min-width: 1024px) {
+  .portfolio__project {
+    -ms-flex-preferred-size: 31%;
+        flex-basis: 31%;
+    max-width: 500px;
+  }
 }
 
 .portfolio__project:hover {
@@ -549,16 +582,25 @@ h2 {
 }
 
 .contact__data {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .contact__data {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    text-align: left;
+  }
 }
 
 .contact__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -569,6 +611,13 @@ h2 {
   margin: 30px 0;
   padding: 30px;
   border: 1px solid #2cb66a;
+}
+
+@media (min-width: 1024px) {
+  .contact__form {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
 }
 
 .contact__form-title {
@@ -617,8 +666,32 @@ h2 {
   background-color: #2cb66a;
 }
 
+.footer .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .footer .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .footer__copyright {
   color: #fff;
+}
+
+.footer__links {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 1024px) {
+  .footer__links {
+    margin-bottom: 0;
+  }
 }
 
 .footer__link i {
