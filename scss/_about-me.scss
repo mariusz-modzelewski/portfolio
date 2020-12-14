@@ -1,6 +1,12 @@
 .about-me {
     margin: 30px auto;
 
+    & .container {
+        @include mq(tablet-large) {
+            justify-content: center;
+        }
+    }
+
     &__title {
         margin: 20px auto;
         flex-basis: 100%;
@@ -10,15 +16,24 @@
     &__image {
         max-width: 400px;
         flex-basis: 40%;
-        border-radius: 25px;
+        border-radius: 50%;
+
+        @include mq(tablet-large) {
+            flex-basis: 100%;
+        }
     }
 
     &__text {
         flex-basis: 60%;
         margin: 0 20px;
 
+        @include mq(tablet-large) {
+            flex-basis: 100%;
+            text-align: center;
+        }
+
         & p {
-            margin: 20px 0;
+            margin: 30px 0;
         }
     }
         

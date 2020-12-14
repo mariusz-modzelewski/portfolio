@@ -15,9 +15,13 @@
     &__info {
         font-size: 1.25rem;
         color: $font-color-default;
+        text-decoration: none;
+        margin: 20px auto;
+
 
         & i {
             margin-right: 5px;
+            min-width: 30px;
         }
     }
 
@@ -63,7 +67,7 @@
         border: none;
         border-bottom: 1px solid $main-color;
         width: 100%;
-        padding: 0 5px;
+        padding: 5px;
 
         &:focus {
             outline-color: $main-color;
@@ -73,6 +77,7 @@
     &__area {
         max-width: 100%;
         min-height: 100px;
+        resize: vertical;
     }
 
     &__btn {

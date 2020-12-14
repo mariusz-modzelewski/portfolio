@@ -3,11 +3,20 @@ html {
     color: $font-color-default;
     font-size: $smartphone-font-size;
 
-    @include mq(desktop-large) {
+    @include mq(tablet-large) {
         font-size: $base-font-size;
     }
 }
 
 a {
     color: #2483d1;
+
+    &:hover {
+        color: $main-color;
+    }
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin: 20px auto 30px;
 }
