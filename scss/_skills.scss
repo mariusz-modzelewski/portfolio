@@ -2,6 +2,10 @@
     width: 100%;
     padding: 30px 0;
 
+    &__gold-star {
+        color:#FFD700;
+    }
+
     & .container {
         justify-content: center;
     }
@@ -49,6 +53,10 @@
             font-size: 120px;
             color: #333;
         }
+
+        &--hidden {
+            display: none;
+        }
     }
 
     &__image {
@@ -63,9 +71,5 @@
 
     &__grade {
         font-size: 1.25rem;
-        
-        &:hover {
-            color:#FFD700;
-        }
     }
 }

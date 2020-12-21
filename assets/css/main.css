@@ -419,6 +419,10 @@ h2 {
   padding: 30px 0;
 }
 
+.skills__gold-star {
+  color: #FFD700;
+}
+
 .skills .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -492,6 +496,10 @@ h2 {
   color: #333;
 }
 
+.skills__skill--hidden {
+  display: none;
+}
+
 .skills__image {
   max-width: 150px;
 }
@@ -504,10 +512,6 @@ h2 {
 
 .skills__grade {
   font-size: 1.25rem;
-}
-
-.skills__grade:hover {
-  color: #FFD700;
 }
 
 .portfolio {
