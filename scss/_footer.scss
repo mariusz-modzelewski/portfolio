@@ -3,23 +3,22 @@
     background-color: $main-color;
 
     & .container {
+        margin-top: -15px;
         justify-content: center;
 
-        @include mq(tablet-large) {
+        @include mq(smartphone) {
             justify-content: space-between;
         }
     }
 
     &__copyright {
         color: $color-white;
+        margin-top: 15px;
     }
 
     &__links {
-        margin-bottom: 15px;
-
-        @include mq(tablet-large) {
-            margin-bottom: 0;
-        }
+        margin-top: 15px;
+        padding-right: 10px;
     }
 
     &__link {

@@ -1,6 +1,10 @@
 .portfolio {
     margin: 30px auto;
 
+    & .container {
+        justify-content: center;
+    }
+
     &__title {
         flex-basis: 100%;
         text-align: center;
@@ -14,13 +18,16 @@
         align-items: center;
         text-align: center;
         flex-basis: 100%;
-        
-        margin: 20px 0;
+        max-width: 500px;
+
+        margin: 20px 20px;
 
         @include mq(tablet-large) {
-            flex-basis: 31%;
+            flex-basis: 45%;
+        }
 
-            max-width: 500px;
+        @include mq(desktop-small) {
+            flex-basis: 29%;
         }
         
         box-shadow: 0 3px 20px 0 rgba(0,0,0,.15);

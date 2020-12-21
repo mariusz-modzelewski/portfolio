@@ -32,9 +32,17 @@
         flex-basis: 100%;
         margin-bottom: 30px;
 
-        @include mq(tablet-large) {
-            flex-basis: 25%;
+        @include mq(smartphone-large) {
+            flex-basis: 48%;
             min-height: 250px;
+        }
+        
+        @include mq(tablet) {
+            flex-basis: 33%;
+        }
+
+        @include mq(tablet-large) {
+            flex-basis: 23%;
         }
 
         & i {

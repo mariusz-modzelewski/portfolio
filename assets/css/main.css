@@ -39,6 +39,7 @@ h2 {
 .header {
   position: relative;
   width: 100vw;
+  max-width: 1920px;
   height: 100vh;
   background-image: url(/assets/img/hero.jpg);
   background-repeat: no-repeat;
@@ -106,12 +107,25 @@ h2 {
   width: 100%;
 }
 
+.menu--fixed {
+  position: fixed;
+}
+
 .menu__items {
   background-color: #fff;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
   display: none;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
 }
 
@@ -120,17 +134,41 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  top: 100%;
+  left: -15px;
+  width: calc(100% + 30px);
+}
+
+@media (min-width: 1024px) {
+  .menu__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: transparent;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .menu__item {
-  margin: 40px 20px;
+  margin: 10px 20px;
+}
+
+@media (min-width: 1024px) {
+  .menu__item {
+    margin: 40px 20px;
+  }
 }
 
 .menu__link {
-  color: #fff;
+  color: #333;
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -139,6 +177,12 @@ h2 {
 
 .menu__link:hover {
   color: #2cb66a;
+}
+
+@media (min-width: 1024px) {
+  .menu__link {
+    color: #fff;
+  }
 }
 
 .hamburger {
@@ -152,6 +196,12 @@ h2 {
 .hamburger:focus > .hamburger__container {
   -webkit-box-shadow: 0 0 2px 2px #51a7e8;
           box-shadow: 0 0 2px 2px #51a7e8;
+}
+
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 .hamburger__container {
@@ -396,11 +446,25 @@ h2 {
   margin-bottom: 30px;
 }
 
+@media (min-width: 640px) {
+  .skills__skill {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    min-height: 250px;
+  }
+}
+
+@media (min-width: 800px) {
+  .skills__skill {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+}
+
 @media (min-width: 1024px) {
   .skills__skill {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    min-height: 250px;
+    -ms-flex-preferred-size: 23%;
+        flex-basis: 23%;
   }
 }
 
@@ -431,6 +495,12 @@ h2 {
   margin: 30px auto;
 }
 
+.portfolio .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .portfolio__title {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -455,7 +525,8 @@ h2 {
   text-align: center;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin: 20px 0;
+  max-width: 500px;
+  margin: 20px 20px;
   -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.15);
   border-radius: 20px;
@@ -467,9 +538,15 @@ h2 {
 
 @media (min-width: 1024px) {
   .portfolio__project {
-    -ms-flex-preferred-size: 31%;
-        flex-basis: 31%;
-    max-width: 500px;
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .portfolio__project {
+    -ms-flex-preferred-size: 29%;
+        flex-basis: 29%;
   }
 }
 
@@ -667,12 +744,13 @@ h2 {
 }
 
 .footer .container {
+  margin-top: -15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 460px) {
   .footer .container {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -682,16 +760,12 @@ h2 {
 
 .footer__copyright {
   color: #fff;
+  margin-top: 15px;
 }
 
 .footer__links {
-  margin-bottom: 15px;
-}
-
-@media (min-width: 1024px) {
-  .footer__links {
-    margin-bottom: 0;
-  }
+  margin-top: 15px;
+  padding-right: 10px;
 }
 
 .footer__link i {
