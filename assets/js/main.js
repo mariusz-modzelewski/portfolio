@@ -20,14 +20,14 @@ desktopViewport.addListener(isDesktop => {
 });
 
 
-var menuFixed = document.querySelector(".menu");
+const menuFixed = document.querySelector(".menu");
 
-wrap.on("scroll", function (e) {
-
-    if (this.scrollTop > 147) {
-        wrap.addClass("fix-search");
+window.addEventListener("scroll", () => {
+    if (document.scrollingElement.scrollTop > 150) {
+        menuFixed.classList.add("menu--fixed");
+        document.querySelector(".menu__brand").src = "/assets/img/logo-fixed.png";
     } else {
-        wrap.removeClass("fix-search");
+        menuFixed.classList.remove("menu--fixed");
+        document.querySelector(".menu__brand").src = "/assets/img/logo.png";
     }
-
 });

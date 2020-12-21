@@ -18,7 +18,7 @@
 
 <body>
     <div class="page-container">
-        <header class="header">
+        <header id="home" class="header">
             <div class="container">
                 <nav class="menu">
                     <img src="/assets/img/logo.png" alt="Mariusz Modzelewski logo" class="menu__brand">
@@ -28,10 +28,10 @@
                         </span>
                     </button>
                     <ul class="menu__items">
-                        <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">O mnie</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">portfolio</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Kontakt</a></li>
+                        <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
+                        <li class="menu__item"><a href="#about-me" class="menu__link">O mnie</a></li>
+                        <li class="menu__item"><a href="#portfolio" class="menu__link">portfolio</a></li>
+                        <li class="menu__item"><a href="#contact" class="menu__link">Kontakt</a></li>
                     </ul>
                 </nav>
             </div>
@@ -46,7 +46,7 @@
             </div>
         </header>
         <main class="main">
-            <section class="about-me">
+            <section id="about-me" class="about-me">
                 <div class="container">
                     <h2 class="about-me__title">O mnie</h2>
                     <img src="/assets/img/about-me.jpg" alt="" class="about-me__image">
@@ -144,7 +144,7 @@
                     <p class="skills__methods">BEM, RWD, Mobile First</p>
                 </div>
             </section>
-            <section class="portfolio">
+            <section id="portfolio" class="portfolio">
                 <div class="container">
                     <h2 class="portfolio__title">Moje projekty</h2>
                     <div class="portfolio__project">
@@ -269,7 +269,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contact">
+            <section id="contact" class="contact">
                 <div class="container">
                     <h2 class="contact__title">Kontakt</h2>
                     <p class="contact__text">Masz jakieś pytania? Skontaktuj się ze mną poprzez e-mail, lub formularz
@@ -301,20 +301,19 @@
                     </form>
                 </div>
             </section>
-    </div>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__links">
-                <a class="footer__link" href="#"><i class="fab fa-github"></i></a>
-                <a class="footer__link" href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p class="footer__copyright">Copyright © 2020 • Mariusz Modzelewski</p>
-            <div class="back-top__container">
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__links">
+                    <a class="footer__link" href="#"><i class="fab fa-github"></i></a>
+                    <a class="footer__link" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="footer__copyright">Copyright © 2020 • Mariusz Modzelewski</p>
+                <div class="back-top__container">
 
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     </div>
     <script src="https://kit.fontawesome.com/f127b247cf.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>

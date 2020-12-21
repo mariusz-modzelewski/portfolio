@@ -18,6 +18,9 @@
     border-radius: 25px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 .container {
     max-width: $screen-max-width;;
     display: flex;

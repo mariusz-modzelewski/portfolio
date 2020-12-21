@@ -109,6 +109,25 @@ h2 {
 
 .menu--fixed {
   position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
+  z-index: 998;
+}
+
+.menu--fixed .menu__link {
+  color: #333;
+}
+
+.menu--fixed .hamburger__bars {
+  background-color: #333;
+}
+
+.menu--fixed .hamburger__bars:before, .menu--fixed .hamburger__bars:after {
+  background-color: #333;
 }
 
 .menu__items {
@@ -785,6 +804,10 @@ h2 {
 ::-webkit-scrollbar-thumb {
   background: #2cb66a;
   border-radius: 25px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {

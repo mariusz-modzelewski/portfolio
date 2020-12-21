@@ -53,6 +53,26 @@
 
     &--fixed {
         position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0 15px;
+
+        background-color: $color-white;
+        box-shadow: 0 8px 6px -6px black;
+
+        z-index: 998;
+
+        .menu__link {
+            color: $menu-link-color;
+        }
+
+        .hamburger__bars {
+            background-color: $menu-link-color;
+
+            &:before, &:after {
+                background-color: $menu-link-color;
+            }
+        }
     }
 
     &__items {
