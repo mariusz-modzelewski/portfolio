@@ -11,6 +11,28 @@ button {
   cursor: pointer;
 }
 
+@-webkit-keyframes cursor {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  70%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cursor {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  70%,
+  100% {
+    opacity: 1;
+  }
+}
+
 html {
   font-family: "Montserrat", sans-serif;
   color: #333;
@@ -265,10 +287,10 @@ h2 {
 
 .hamburger__bars:after {
   bottom: -12px;
-  -webkit-transition: bottom 100ms 250ms ease-in,  -webkit-transform 220ms ease-in-out;
-  transition: bottom 100ms 250ms ease-in,  -webkit-transform 220ms ease-in-out;
-  transition: bottom 100ms 250ms ease-in,  transform 220ms ease-in-out;
-  transition: bottom 100ms 250ms ease-in,  transform 220ms ease-in-out,  -webkit-transform 220ms ease-in-out;
+  -webkit-transition: bottom 100ms 250ms ease-in, -webkit-transform 220ms ease-in-out;
+  transition: bottom 100ms 250ms ease-in, -webkit-transform 220ms ease-in-out;
+  transition: bottom 100ms 250ms ease-in, transform 220ms ease-in-out;
+  transition: bottom 100ms 250ms ease-in, transform 220ms ease-in-out, -webkit-transform 220ms ease-in-out;
 }
 
 .hamburger--active .hamburger__bars {
@@ -290,13 +312,14 @@ h2 {
   bottom: 0;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  -webkit-transition: bottom 100ms ease-out,  -webkit-transform 220ms 120ms ease-in-out;
-  transition: bottom 100ms ease-out,  -webkit-transform 220ms 120ms ease-in-out;
-  transition: bottom 100ms ease-out,  transform 220ms 120ms ease-in-out;
-  transition: bottom 100ms ease-out,  transform 220ms 120ms ease-in-out,  -webkit-transform 220ms 120ms ease-in-out;
+  -webkit-transition: bottom 100ms ease-out, -webkit-transform 220ms 120ms ease-in-out;
+  transition: bottom 100ms ease-out, -webkit-transform 220ms 120ms ease-in-out;
+  transition: bottom 100ms ease-out, transform 220ms 120ms ease-in-out;
+  transition: bottom 100ms ease-out, transform 220ms 120ms ease-in-out, -webkit-transform 220ms 120ms ease-in-out;
 }
 
-.hamburger:focus, .hamburger__container:focus {
+.hamburger:focus,
+.hamburger__container:focus {
   outline: none;
 }
 
@@ -855,4 +878,10 @@ html {
 .btn--primary:hover {
   background-color: #2cb66a;
   color: #fff;
+}
+
+.cursor::after {
+  content: "|";
+  -webkit-animation: cursor .4s infinite alternate;
+          animation: cursor .4s infinite alternate;
 }

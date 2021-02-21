@@ -3,13 +3,11 @@
     width: 100vw;
     max-width: 1920px;
     height: 100vh;
-
     background-image: url(/assets/img/hero.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
-
     &__text {
         display: flex;
         flex-direction: column-reverse;
@@ -19,27 +17,21 @@
         min-height: 70vh;
         width: 100%;
     }
-
     &__title {
         color: $color-white;
         font-size: 2.5rem;
-
         @include mq(tablet-large) {
             font-size: 3rem;
         }
-
-        & > span {
+        &>span {
             color: $main-color;
         }
     }
-
     &__sub-title {
         font-size: 3rem;
-
         @include mq(tablet-large) {
             font-size: 4rem;
         }
-
         color: $color-white;
     }
 }
@@ -50,31 +42,25 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
     &--fixed {
         position: fixed;
         top: 0;
         left: 0;
         padding: 0 15px;
-
         background-color: $color-white;
         box-shadow: 0 8px 6px -6px black;
-
         z-index: 998;
-
         .menu__link {
             color: $menu-link-color;
         }
-
         .hamburger__bars {
             background-color: $menu-link-color;
-
-            &:before, &:after {
+            &:before,
+            &:after {
                 background-color: $menu-link-color;
             }
         }
     }
-
     &__items {
         background-color: $color-white;
         box-shadow: 0 8px 6px -6px black;
@@ -83,7 +69,6 @@
         justify-content: center;
         align-items: center;
         list-style: none;
-
         &--open {
             display: flex;
             position: absolute;
@@ -91,7 +76,6 @@
             left: -15px;
             width: calc(100% + 30px);
         }
-
         @include mq(tablet-large) {
             display: flex;
             flex-direction: row;
@@ -100,26 +84,21 @@
             box-shadow: none;
         }
     }
-
     &__item {
         margin: 10px 20px;
-
         @include mq(tablet-large) {
             margin: 40px 20px;
         }
     }
-
     &__link {
         color: $menu-link-color;
         font-size: 1rem;
         text-transform: uppercase;
         font-weight: 600;
         text-decoration: none;
-
         &:hover {
             color: $main-color;
         }
-
         @include mq(tablet-large) {
             color: $color-white;
         }
@@ -132,13 +111,11 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
-
     &:focus {
-        & > .hamburger__container {
-          	box-shadow: 0 0 2px 2px #51a7e8;
+        &>.hamburger__container {
+            box-shadow: 0 0 2px 2px #51a7e8;
         }
     }
-
     @include mq(tablet-large) {
         display: none;
     }
@@ -158,8 +135,8 @@
     height: 2px;
     background-color: $color-white;
     transition: transform 220ms ease-in-out;
-
-    &:before, &:after {
+    &:before,
+    &:after {
         display: block;
         position: absolute;
         width: 35px;
@@ -167,16 +144,13 @@
         background-color: $color-white;
         content: '';
     }
-
     &:before {
         top: -12px;
         transition: top 100ms 250ms ease-in, transform 220ms ease-in-out;
     }
-
     &:after {
         bottom: -12px;
-        transition: bottom 100ms 250ms ease-in, 
-          			transform 220ms ease-in-out;
+        transition: bottom 100ms 250ms ease-in, transform 220ms ease-in-out;
     }
 }
 
@@ -184,25 +158,23 @@
     .hamburger__bars {
         transform: rotate(225deg);
         transition: transform 220ms 120ms ease-in-out;
-
         &:before {
             top: 0;
             transition: top 100ms ease-out;
         }
-
         &:after {
             bottom: 0;
             transform: rotate(-90deg);
-            transition: bottom 100ms ease-out, 
-            		  	transform 220ms 120ms ease-in-out;
+            transition: bottom 100ms ease-out, transform 220ms 120ms ease-in-out;
         }
     }
 }
 
-.hamburger, .hamburger__container {
+.hamburger,
+.hamburger__container {
     &:focus {
-      	outline: none;
-  	}
+        outline: none;
+    }
 }
 
 .scroll-down {
@@ -210,46 +182,41 @@
     bottom: 30px;
     left: 50%;
     width: 36px;
-	height: 36px;
-	box-sizing: border-box;
+    height: 36px;
+    box-sizing: border-box;
     transform: rotate(135deg);
     opacity: .5;
-	
-	&::before {
-		content: '';
-		width: 100%;
-		height: 100%;
-		border-width: 4px 4px 0 0;
-		border-style: solid;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-width: 4px 4px 0 0;
+        border-style: solid;
         border-color: $color-white;
-		transition: .2s ease;
-		display: block;
-		transform-origin: 100% 0;
-	}
-
-	&:after {
-		content: '';
-		float: left;
-		position: relative;
-		top: -100%;
-		width: 100%;
-		height: 100%;
-		border-width: 0 4px 0 0;
-		border-style: solid;
-		border-color: $color-white;
-		transform-origin: 100% 0;
-		transition:.2s ease;
-	}
-	
-	&:hover::after {
-		transform: rotate(45deg);
-		border-color: $main-color;
-		height: 120%;
+        transition: .2s ease;
+        display: block;
+        transform-origin: 100% 0;
     }
-    
-	&:hover::before {
-		border-color: $main-color;
-		transform: scale(.8);
-		
-	}
+    &:after {
+        content: '';
+        float: left;
+        position: relative;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        border-width: 0 4px 0 0;
+        border-style: solid;
+        border-color: $color-white;
+        transform-origin: 100% 0;
+        transition: .2s ease;
+    }
+    &:hover::after {
+        transform: rotate(45deg);
+        border-color: $main-color;
+        height: 120%;
+    }
+    &:hover::before {
+        border-color: $main-color;
+        transform: scale(.8);
+    }
 }
